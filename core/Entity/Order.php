@@ -3,7 +3,7 @@
 namespace Core\Entity;
 
 
-class Product
+class Order
 {
 
 }
