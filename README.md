@@ -14,9 +14,10 @@ Para testar este projeto, basta seguir os tópicos a seguir:
 
 1. [`Configurar o arquivo hosts do sistema operacional`](#hosts-config)
 2. [`Docker`](#docker-config)
-2. [`Migrations e Seeders`](#db-config)
-3. [`Documentação da API`](#doc-config)
-4. [`Testes e Debugs`](#tests-config)
+3. [`Composer`](#composer-config)
+4. [`Migrations e Seeders`](#db-config)
+5. [`Documentação da API`](#doc-config)
+6. [`Testes e Debugs`](#tests-config)
 
 
 ## <a name="hosts-config"></a> Configurar o arquivo hosts do sistema operacional
@@ -40,7 +41,13 @@ Com o docker instalado, rode o commando abaixo na raiz do projeto, para iniciar 
 ```
 docker-compose up -d --build
 ```
+## <a name="composer-config"></a>Composer:
 
+Para instalar as dependências do Laravel, rode o comando na raiz do projeto   
+
+```
+docker-compose exec fpm composer install
+```
 ## <a name="db-config"></a>Migrations e Seeders:
 
 Foi criado as migrations para versionamento das tabelas do banco de dados, e seeders para popular o banco automaticamente.  
@@ -48,10 +55,8 @@ Com isso, será possível testar todos os endepoints.
 
 Rodar na sequência os comandos abaixo:
 ```
-docker-compose exec fpm composer install
 docker-compose exec fpm php artisan migrate
 docker-compose exec fpm php artisan db:seed
-
 ```
 
 ## <a name="doc-config"></a> Documentação da API
