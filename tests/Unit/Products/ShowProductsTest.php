@@ -83,7 +83,6 @@ class ShowProductsTest extends TestCase
         $response = $this->json('GET', '/api/products?name=hinode');
         //checks if found product
         $response->assertJsonFragment([
-            'total' => 1,
             'name' => 'Perfume Hinode'
         ]);
         $response->assertStatus(200);
@@ -128,7 +127,6 @@ class ShowProductsTest extends TestCase
 
         //checks if found product
         $response->assertJsonFragment([
-            'total' => 1,
             'name' => 'Tecpix',
             'description' => 'A melhor câmera do mercado, ela é 10 em 1'
         ]);

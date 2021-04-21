@@ -2,11 +2,10 @@
   <img src="https://github.com/williudo/mercadolitro/blob/master/docs/MercadoLitroPequeno.png?raw=true">
 </p>
 
-# MercadoLitro API
+# MercadoLitro API - WIP
 
-Neste repositório foi feito uma API em Laravel que simula um marketplace de bebidas.  
+Neste repositório foi feito uma API em Laravel utilizando Clean Architecture que simula um marketplace de bebidas.  
 Inspirada no Mercado Livre, mas claro, muito menor.
-
 
 ## Índice
 
